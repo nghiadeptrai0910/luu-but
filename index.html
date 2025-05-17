@@ -102,7 +102,7 @@
 
     try {
       // B1: Lấy dữ liệu cũ để tính STT
-      const res = await fetch('https://sheet.best/api/sheets/YOUR-API-ID');
+      const res = await fetch('https://api.sheetbest.com/sheets/0f49603f-1e5f-401e-a18e-61278afb72c4');
       const entries = await res.json();
       const stt = entries.length + 1;
 
@@ -118,7 +118,7 @@
       };
 
       // B3: Gửi lên Sheet.best
-      const send = await fetch('https://sheet.best/api/sheets/YOUR-API-ID', {
+      const send = await fetch('https://api.sheetbest.com/sheets/0f49603f-1e5f-401e-a18e-61278afb72c4', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
